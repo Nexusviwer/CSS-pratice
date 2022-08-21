@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #020202;
+            transform-style:preserve-3d ;
+        }
+        .container{
+           position: relative;
+           width: 300px;
+           height: 300px;
+           transform-style:preserve-3d;
+          
+           animation:  anim 4s linear infinite;
+        }
+        .container div{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            top: 0;
+           left: 0;
+        }
+        .container div span{
+            position: absolute;
+            background-color: rgb(36, 170, 141);
+            width: 100%;
+            height: 100%;
+            gap: 300px;
+           top: 0;
+           left: 0;
+           border: solid 1px black;
+          
+            transform: rotateX(calc(90deg * var(--i)))translateZ(150px);
+            
+        }
+        @keyframes anim{
+            from{
+                  transform: rotateX(0deg)rotateY(30deg);
+                  
+            }
+            to{
+                transform:rotateX(360deg)rotateY(30deg) ;
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top"></div>
+      <div>
+        <span style="--i:0"></span>
+        <span style="--i:1"></span>
+        <span style="--i:2"></span>
+        <span style="--i:3"></span>
+      </div>
+      
+    </div>
+    <div class="container">
+        <div class="top"></div>
+      <div>
+        <span style="--i:0"></span>
+        <span style="--i:1"></span>
+        <span style="--i:2"></span>
+        <span style="--i:3"></span>
+      </div>
+      
+    </div>
+    <div class="container">
+        <div class="top"></div>
+      <div>
+        <span style="--i:0"></span>
+        <span style="--i:1"></span>
+        <span style="--i:2"></span>
+        <span style="--i:3"></span>
+      </div>
+      
+    </div>
+</body>
+</html>
