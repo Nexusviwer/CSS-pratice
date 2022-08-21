@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: rgb(36, 34, 34);
+      }
+      .menubar{
+       display: flex;
+        width: 500px;
+        align-items: center;
+        height: 80px;
+        background-color: whitesmoke;
+        border-radius: 25px;
+      }
+      .menubar ul{
+        display: flex;
+        gap: 60px;
+        align-items: center;
+        list-style: none;
+        z-index: 1;      
+        list-style: none; 
+      }
+      #c1{
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background-color:rgb(36, 34, 34);
+        transform: translateX(18px)translateY(-40px);
+      }
+      #c2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+        background-color: aqua;
+        border-radius: 50%;
+        z-index: 0;
+      }
+      #l1{
+    transform: translateY(15px);
+      }
+      .menubar ul li a{
+        color: black;
+        font-size: 17px;
+        text-decoration: none;
+      }
+    </style>
+</head>
+<body>
+    <div class="menubar">
+        <div id="c1">
+            <div id="c2"><img id="img1" src="images/home.png"></div>
+        </div>
+        <ul>
+            <li id="l1"><a href="#" onclick="home()" >HOME</a></li>
+            <li id="l2"><a href="#" onclick="about()">ABOUT</a></li>
+            <li id="l3"><a href="#" onclick="contact()">CONTACT</a></li>
+            <li id="l4"><a href="#" onclick="prod()">PRODUCTS</a></li>
+        </ul>
+    </div>
+    <script>
+        var l4 = document.getElementById("l4")
+        var l1 = document.getElementById("l1")
+        var l2 = document.getElementById("l2")
+        var l3 = document.getElementById("l3") 
+        var l4 = document.getElementById("l4")
+        var elemento1 = document.getElementById("c1")
+        var image = document.getElementById("img1")
+        function home(){
+             elemento1.style.transform = "translateX(18px)translateY(-40px)"
+             l1.style.transform = "translateY(15px)"
+            l3.style.transform = "translateY(0px)"
+            l4.style.transform = "translateY(0px)"
+            l2.style.transform = "translateY(0px)"
+            image.src = "images/home.png"
+        }
+        function about(){
+            var elemento1 = document.getElementById("c1")
+            elemento1.style.transform = "translateX(125px)translateY(-40px)"
+            var ele2 = document.getElementById("l2")
+            l2.style.transform = "translateY(15px)"
+            var ele3 = document.getElementById("l1")
+            l1.style.transform = "translateY(0px)"
+            l3.style.transform = "translateY(0px)"
+            l4.style.transform = "translateY(0px)"
+            image.src = "images/about.png"
+        }
+        function contact(){
+            var elemento1 = document.getElementById("c1")
+            elemento1.style.transform = "translateX(250px)translateY(-40px)"
+            l1.style.transform = "translateY(0px)"
+            l3.style.transform = "translateY(15px)"
+            l4.style.transform = "translateY(0px)"
+            l2.style.transform = "translateY(0px)"
+            image.src = "images/chat.png"
+        }
+        function prod(){
+            elemento1.style.transform = "translateX(390px)translateY(-40px)"
+            l1.style.transform = "translateY(0px)"
+            l3.style.transform = "translateY(0px)"
+            l4.style.transform = "translateY(15px)"
+            l2.style.transform = "translateY(0px)"
+            image.src = "images/user.png"
+        }
+    </script>
+</body>
+</html>
